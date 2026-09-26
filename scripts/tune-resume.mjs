@@ -1,0 +1,352 @@
+import { execSync } from 'child_process';
+import fs from 'fs';
+
+function testConfig(basePt, lineH, secMarginTop, secMarginBottom, jobMargin, bulletMargin) {
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ranjeet Kumar Rajani - Resume</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 12mm 18mm 12mm 18mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      color: #111827;
+      background: #ffffff;
+      font-size: ${basePt}pt;
+      line-height: ${lineH};
+      -webkit-font-smoothing: antialiased;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 21pt;
+      font-weight: 700;
+      color: #1b3c73;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .header .subtitle {
+      font-size: 10pt;
+      color: #1f2937;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .header .contact {
+      font-size: 9.3pt;
+      color: #374151;
+    }
+    .header .contact a {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+    
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1b3c73;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border-bottom: 1.5px solid #94a3b8;
+      padding-bottom: 2px;
+      margin-top: ${secMarginTop}px;
+      margin-bottom: ${secMarginBottom}px;
+    }
+
+    .summary-text {
+      font-size: ${basePt}pt;
+      line-height: ${lineH};
+      color: #1f2937;
+      text-align: justify;
+      margin-bottom: 4px;
+    }
+
+    .competency-item {
+      font-size: ${basePt}pt;
+      line-height: ${lineH};
+      color: #1f2937;
+      margin-bottom: 4.5px;
+    }
+    .competency-item strong {
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .job-block {
+      margin-bottom: ${jobMargin}px;
+    }
+    .company-title {
+      font-size: 10.2pt;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 1px;
+    }
+    .company-desc {
+      font-size: 9pt;
+      font-style: italic;
+      color: #4b5563;
+      margin-bottom: 2px;
+    }
+    .role-row {
+      margin-bottom: 3px;
+    }
+    .role-title {
+      font-size: 9.8pt;
+      font-weight: 700;
+      font-style: italic;
+      color: #111827;
+    }
+    .role-dates {
+      font-size: 9.2pt;
+      font-style: normal;
+      color: #374151;
+    }
+
+    ul.bullets {
+      margin-left: 18px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+    ul.bullets li {
+      font-size: ${basePt}pt;
+      line-height: ${lineH};
+      color: #1f2937;
+      margin-bottom: ${bulletMargin}px;
+      padding-left: 2px;
+    }
+
+    .project-block {
+      margin-bottom: ${jobMargin}px;
+    }
+    .project-header {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 2px;
+    }
+
+    .edu-item {
+      font-size: ${basePt}pt;
+      line-height: ${lineH};
+      color: #1f2937;
+      margin-bottom: 3.5px;
+    }
+    .edu-item strong {
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+      height: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bottom-meta {
+      font-size: 9.2pt;
+      line-height: 1.25;
+      color: #1f2937;
+      margin-top: 6px;
+    }
+    .bottom-meta strong {
+      font-weight: 700;
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="header">
+    <h1>RANJEET KUMAR RAJANI</h1>
+    <div class="subtitle">Commercial &amp; Sales Analytics | Pharma Commercial Operations | Business Intelligence</div>
+    <div class="contact">
+      Fairfield, IA &bull; +1 (641) 233-9348 &bull; ranjeetkumarrajanii@gmail.com &bull; 
+      <a href="https://www.linkedin.com/in/ranjeet-rajani/">LinkedIn</a> &bull; 
+      <a href="https://github.com/ranjeet-rajani">GitHub</a>
+    </div>
+  </div>
+
+  <div class="section-title">PROFESSIONAL SUMMARY</div>
+  <div class="summary-text">
+    Pharmaceutical commercial leader with 15+ years running sales teams, territories, and revenue performance at leading pharma companies in Pakistan. Now pairing that frontline commercial judgment with a modern analytics toolkit — Power BI, SQL, R, Tableau, and AI-assisted workflows — and an MBA in ERP &amp; SAP at Maharishi International University (Fairfield, Iowa) to turn commercial data into decisions that grow revenue. Directed 40+ person field forces, delivered a 450% segment revenue turnaround, and traced a $4.34M revenue shortfall to its root causes using a 45-measure Power BI model.
+  </div>
+
+  <div class="section-title">CORE COMPETENCIES</div>
+  <div class="competency-item">
+    <strong>Commercial &amp; Sales Analytics:</strong> Sales-vs-Target Performance Management, KPI Reporting &amp; Dashboards, Revenue &amp; Territory Analysis, Sales Forecasting, Quota Attainment Analysis, Customer Targeting &amp; Segmentation
+  </div>
+  <div class="competency-item">
+    <strong>Data &amp; Business Intelligence:</strong> Power BI (DAX, Power Query, Star Schema Modeling), SQL, R (Tidyverse), Tableau, Advanced Excel (PivotTables, KPI Dashboards), Data Cleaning &amp; Visualization
+  </div>
+  <div class="competency-item">
+    <strong>AI &amp; Process Acceleration:</strong> AI-assisted analytics workflows — accelerating dashboard development, data validation, and insight documentation; applying AI to speed commercial reporting, root-cause analysis, and decision-making
+  </div>
+  <div class="competency-item">
+    <strong>Commercial Operations:</strong> CRM / SFA (MRep) — Call Reporting, Territory Management, Distribution Tracking; Patient Support Programs; Cross-Functional Collaboration (Medical, Marketing, Supply Chain); Stakeholder Reporting; Hospital Tenders &amp; Formularies
+  </div>
+  <div class="competency-item">
+    <strong>ERP &amp; Leadership (supporting):</strong> SAP S/4HANA (FI/CO, MM, PP), Procure-to-Pay Configuration, Business Process Mapping; Team Leadership (40+), Training &amp; Coaching
+  </div>
+
+  <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+
+  <!-- Ferozsons 1 -->
+  <div class="job-block">
+    <div class="company-title">Ferozsons Laboratories Ltd. | Karachi, Pakistan</div>
+    <div class="company-desc">Leading Pakistani pharmaceutical manufacturer specializing in gastroenterology and hepatology therapeutics</div>
+    <table style="width: 100%; margin-bottom: 2px;">
+      <tr>
+        <td class="role-title" style="text-align: left;">Regional Patients Support Manager</td>
+        <td class="role-dates" style="text-align: right;">Jul 2024 &ndash; Oct 2024</td>
+      </tr>
+    </table>
+    <ul class="bullets">
+      <li>Built weekly Excel KPI dashboards tracking revenue-vs-target, stock availability, and territory coverage to guide data-driven resource allocation across the regional portfolio.</li>
+      <li>Directed a team of Zonal Sales Managers, aligning field execution and reporting with revenue targets and compliance standards.</li>
+      <li>Oversaw MRep call reporting and territory data across the regional portfolio, ensuring consistent KPI tracking and data quality across zones ahead of leadership reviews.</li>
+    </ul>
+  </div>
+
+  <!-- Ferozsons 2 -->
+  <div class="job-block">
+    <div class="company-title">Ferozsons Laboratories Ltd. | Karachi, Pakistan</div>
+    <table style="width: 100%; margin-bottom: 2px;">
+      <tr>
+        <td class="role-title" style="text-align: left;">Senior Zonal Sales Manager</td>
+        <td class="role-dates" style="text-align: right;">Aug 2023 &ndash; Jul 2024</td>
+      </tr>
+    </table>
+    <ul class="bullets">
+      <li>Audited sales-vs-target, forecast, and distribution data through the MRep CRM platform, turning reports into Power BI and Excel presentations that guided resource allocation and beat quarterly revenue targets.</li>
+      <li>Partnered with medical, marketing, and supply chain teams, using product-availability data to eliminate stockouts; analyzed competitor and prescription data monthly to protect key-account share.</li>
+    </ul>
+  </div>
+
+  <!-- Ferozsons 3 -->
+  <div class="job-block" style="margin-bottom: 0;">
+    <div class="company-title">Ferozsons Laboratories Ltd. | Karachi, Pakistan</div>
+    <table style="width: 100%; margin-bottom: 2px;">
+      <tr>
+        <td class="role-title" style="text-align: left;">Zonal Sales Manager</td>
+        <td class="role-dates" style="text-align: right;">Feb 2022 &ndash; Aug 2023</td>
+      </tr>
+    </table>
+    <ul class="bullets">
+      <li>Directed a 40-person field sales force, reallocating effort across territories using MRep performance data &mdash; exceeded annual quota at 116% in both 2022 and 2023.</li>
+      <li>Built a territory performance tracker across 30+ healthcare institutions, expanding regional coverage by 25%.</li>
+      <li>Led the national launch of Prulevity (Prucalopride), prioritizing high-potential accounts through account and territory analysis to capture 40% market share within 12 months.</li>
+      <li>Implemented a client satisfaction scoring system, lifting customer retention scores by 20%.</li>
+    </ul>
+  </div>
+
+  <!-- FORCE PAGE BREAK -->
+  <div class="page-break"></div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  
+  <!-- CCL Pharmaceuticals -->
+  <div class="job-block">
+    <div class="company-title">CCL Pharmaceuticals | Karachi, Pakistan</div>
+    <div class="company-desc">Pakistani pharmaceutical company known for its hepatology and gastroenterology product portfolio</div>
+    <table style="width: 100%; margin-bottom: 2px;">
+      <tr>
+        <td class="role-title" style="text-align: left;">Sales Manager &mdash; Speciality Therapeutics</td>
+        <td class="role-dates" style="text-align: right;">Feb 2018 &ndash; Feb 2021</td>
+      </tr>
+    </table>
+    <ul class="bullets">
+      <li>Delivered a 450% revenue turnaround in the Hepatology segment in Year 1 by diagnosing an underperforming territory through dashboard reporting, then expanding HCP coverage and call quality; led a 12-person team across Sindh and Baluchistan.</li>
+      <li>Sustained 175% and 150% year-over-year growth in Gastroenterology in Years 2 and 3 through ongoing territory performance tracking.</li>
+      <li>Designed a monthly SKU-level performance dashboard across four cities, cutting issue-detection time by two weeks.</li>
+      <li>Delivered monthly Best Practices in Sales &amp; Service (BPSS) training, upskilling 12 representatives in consultative selling, CRM/call-reporting data usage, and sales-vs-target tracking.</li>
+    </ul>
+  </div>
+
+  <!-- Getz Pharma -->
+  <div class="job-block">
+    <div class="company-title">Getz Pharma | Karachi, Pakistan</div>
+    <div class="company-desc">Pakistan's leading pharmaceutical company, with a strong specialty care and cardiology portfolio</div>
+    <table style="width: 100%; margin-bottom: 2px;">
+      <tr>
+        <td class="role-title" style="text-align: left;">Area Sales Manager &mdash; Key Institutional Accounts</td>
+        <td class="role-dates" style="text-align: right;">Jan 2013 &ndash; Feb 2018</td>
+      </tr>
+    </table>
+    <ul class="bullets">
+      <li>Led 5 Territory Managers across premier institutions (Aga Khan University Hospital, NICVD, JPMC), growing market share by 20% through account and tender data analysis.</li>
+      <li>Secured multi-year government hospital tenders through quarterly territory data analysis; lifted team productivity 30% with weekly KPI reviews and structured coaching.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">KEY ANALYTICS &amp; ERP PROJECTS</div>
+
+  <div class="project-block">
+    <div class="project-header">Pharma Commercial Analytics Command Center &mdash; Power BI, DAX, SQL, Star Schema (2026)</div>
+    <ul class="bullets">
+      <li>Built a 7-page Power BI report on a 9-table star schema (4 fact tables, 5 dimensions) spanning 24 months, 20 territories, 128 healthcare accounts, and 6 brands, with 45 DAX measures reconciled line-by-line to source data.</li>
+      <li>Traced 30% of a $4.34M revenue shortfall ($1.31M) to inventory stockouts rather than sales execution, classifying all 20 territories by root cause &mdash; supply, competitive, or execution &mdash; each mapped to an accountable function; built a month-index key enabling month-over-month and rolling analysis.</li>
+      <li>Accelerated delivery with AI-assisted workflows across DAX development, data validation, and documentation &mdash; from raw data to business decisions, faster.</li>
+    </ul>
+  </div>
+
+  <div class="project-block">
+    <div class="project-header">Cyclistic Bikeshare Capstone, Google Data Analytics &mdash; R, Tidyverse (2026)</div>
+    <ul class="bullets">
+      <li>Cleaned and analyzed 4.3M+ trip records in R, applying documented rules to remove zero-duration and over-24-hour rides; found casual riders average 22.8-minute rides vs. 12.1 for members, with 8x seasonal variation against under 3x for members.</li>
+      <li>Delivered five ggplot2 visualizations and three data-backed marketing recommendations, including seasonal membership promotions and e-bike incentives.</li>
+    </ul>
+  </div>
+
+  <div class="project-block">
+    <div class="project-header">SAP S/4HANA Procure-to-Pay Implementation &mdash; SAP MM, FI/CO, IDES Sandbox (2026)</div>
+    <ul class="bullets">
+      <li>Configured end-to-end P2P in the IDES sandbox, mapping the full cycle from purchase requisition through vendor payment and GL posting.</li>
+      <li>Redesigned approvals to eliminate a 3-step bottleneck, cutting simulated procurement cycle time by 18%; produced process documentation and a stakeholder presentation covering gap analysis and recommended configuration changes.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">EDUCATION</div>
+  <div class="edu-item">
+    <strong>MBA, Enterprise Resource Planning (ERP) &amp; SAP</strong> &mdash; Maharishi International University, Fairfield, IA (Feb 2026 &ndash; Oct 2028)
+  </div>
+  <div class="edu-item">
+    <strong>MA Economics (2009); BSc (2003)</strong> &mdash; Shah Abdul Latif University, Pakistan
+  </div>
+
+  <div class="section-title">CERTIFICATIONS</div>
+  <ul class="bullets" style="margin-bottom: 4px;">
+    <li>Google Data Analytics Professional Certificate &mdash; SQL, R, Tableau, Data Cleaning &amp; Visualization (2026)</li>
+    <li>Sales Management Development Program (Part I &amp; II), TSF (2024); Advanced Pharmaceutical Selling Skills, Ferozsons (2023); Leadership Development Program, Getz Pharma (2013)</li>
+  </ul>
+
+  <div class="bottom-meta">
+    <strong>Awards:</strong> Best Regional Manager, Ferozsons (2023); Long Outstanding Service Award, Getz Pharma (2015) &nbsp;|&nbsp; <strong>Languages:</strong> English, Urdu, Hindi
+  </div>
+
+</body>
+</html>`;
+
+  fs.writeFileSync('/tmp/test.html', html);
+  execSync('wkhtmltopdf --disable-smart-shrinking --page-size Letter --margin-top 12mm --margin-bottom 12mm --margin-left 18mm --margin-right 18mm --enable-local-file-access /tmp/test.html /tmp/test.pdf 2>/dev/null');
+  const res = execSync('gs -dBATCH -dNOPAUSE -sDEVICE=bbox /tmp/test.pdf 2>&1', { encoding: 'utf8' });
+  console.log(`Config ${basePt}pt with --disable-smart-shrinking:`);
+  const lines = res.split('\n').filter(l => l.includes('BoundingBox:'));
+  lines.forEach(l => console.log('  ' + l));
+}
+
+testConfig(11.0, 1.34, 13, 6, 9, 3.5);
+testConfig(11.5, 1.35, 14, 6, 10, 3.8);
+testConfig(12.0, 1.36, 15, 7, 11, 4.0);

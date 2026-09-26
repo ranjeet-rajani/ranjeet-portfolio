@@ -1,0 +1,557 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #0b1326;
+    color: #dae2fd;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.font-heading {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1326;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222a3d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #31394d;
+}
+
+/* Smooth transition for theme switching */
+body, #app-root-container, #main-nav-header, section, .group, footer {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+/* ==========================================================================
+   Financial White - Wall Street / Institutional High-Contrast Light Mode
+   ========================================================================== */
+[data-theme="financial-white"],
+.financial-white {
+  color-scheme: light;
+}
+
+[data-theme="financial-white"] body,
+.financial-white body,
+body.financial-white,
+[data-theme="financial-white"] #app-root-container {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Backgrounds in Financial White */
+[data-theme="financial-white"] .bg-\[\#0b1326\],
+[data-theme="financial-white"] .bg-\[\#0b1326\]\/90,
+[data-theme="financial-white"] .bg-\[\#0b1326\]\/80,
+[data-theme="financial-white"] .bg-\[\#0b1326\]\/70 {
+  background-color: #f8fafc !important;
+}
+
+[data-theme="financial-white"] .bg-\[\#0f172a\],
+[data-theme="financial-white"] .bg-\[\#0f172a\]\/95,
+[data-theme="financial-white"] .bg-\[\#0f172a\]\/90,
+[data-theme="financial-white"] .bg-\[\#0f172a\]\/70 {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 4px 16px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-theme="financial-white"] .bg-\[\#131b2e\],
+[data-theme="financial-white"] .bg-\[\#131b2e\]\/60 {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-theme="financial-white"] .bg-\[\#171f33\],
+[data-theme="financial-white"] .bg-\[\#171f33\]\/90,
+[data-theme="financial-white"] .bg-\[\#171f33\]\/40 {
+  background-color: #f1f5f9 !important;
+}
+
+[data-theme="financial-white"] .bg-\[\#060e20\],
+[data-theme="financial-white"] .bg-\[\#060e20\]\/50 {
+  background-color: #f1f5f9 !important;
+}
+
+[data-theme="financial-white"] .bg-\[\#222a3d\] {
+  background-color: #e2e8f0 !important;
+}
+
+[data-theme="financial-white"] .bg-\[\#1e293b\] {
+  background-color: #f1f5f9 !important;
+}
+
+/* Header in Financial White */
+[data-theme="financial-white"] #main-nav-header {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-bottom-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.07) !important;
+}
+
+[data-theme="financial-white"] #top-section-navigator-container {
+  border-top-color: #e2e8f0 !important;
+}
+
+[data-theme="financial-white"] #top-section-navigator button:not(.bg-\[\#2563eb\]) {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+[data-theme="financial-white"] #top-section-navigator button:not(.bg-\[\#2563eb\]):hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+/* Borders in Financial White */
+[data-theme="financial-white"] .border-\[\#1e293b\],
+[data-theme="financial-white"] .border-\[\#1e293b\]\/70,
+[data-theme="financial-white"] .border-\[\#1e293b\]\/60,
+[data-theme="financial-white"] .border-\[\#1e293b\]\/50,
+[data-theme="financial-white"] .border-\[\#1e293b\]\/30,
+[data-theme="financial-white"] .border-\[\#222a3d\] {
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme="financial-white"] .border-\[\#334155\],
+[data-theme="financial-white"] .border-\[\#334155\]\/60 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Typography & Text overrides */
+[data-theme="financial-white"] .text-\[\#dae2fd\] {
+  color: #1e293b !important;
+}
+
+[data-theme="financial-white"] .text-\[\#8d90a0\] {
+  color: #475569 !important;
+}
+
+[data-theme="financial-white"] .text-\[\#c3c6d7\] {
+  color: #334155 !important;
+}
+
+[data-theme="financial-white"] .text-\[\#b4c5ff\] {
+  color: #1d4ed8 !important;
+}
+
+[data-theme="financial-white"] .text-\[\#7bd0ff\] {
+  color: #0369a1 !important;
+}
+
+[data-theme="financial-white"] .text-\[\#4edea3\] {
+  color: #047857 !important;
+}
+
+[data-theme="financial-white"] .text-\[\#64748b\] {
+  color: #64748b !important;
+}
+
+[data-theme="financial-white"] .text-\[\#ffb4ab\] {
+  color: #b91c1c !important;
+}
+
+/* Headings and bold text in Financial White */
+[data-theme="financial-white"] h1,
+[data-theme="financial-white"] h2,
+[data-theme="financial-white"] h3,
+[data-theme="financial-white"] h4,
+[data-theme="financial-white"] h5,
+[data-theme="financial-white"] h6 {
+  color: #0f172a !important;
+}
+
+/* General white text converted to deep slate in light mode, except on solid colored buttons */
+[data-theme="financial-white"] .text-white:not(.bg-\[\#2563eb\]):not(.bg-\[\#1d4ed8\]):not(.bg-\[\#00a572\]):not(.bg-\[\#10b981\]):not(button.bg-\[\#2563eb\] *):not(button.bg-\[\#1d4ed8\] *):not(.bg-\[\#2563eb\] *):not(.bg-\[\#1d4ed8\] *):not(.bg-\[\#00a572\] *):not(.bg-\[\#10b981\] *):not(#theme-toggle-dark[aria-checked="true"] *) {
+  color: #0f172a !important;
+}
+
+/* Solid colored buttons preserve crisp white text */
+[data-theme="financial-white"] .bg-\[\#2563eb\],
+[data-theme="financial-white"] .bg-\[\#1d4ed8\],
+[data-theme="financial-white"] .bg-\[\#00a572\],
+[data-theme="financial-white"] .bg-\[\#10b981\] {
+  color: #ffffff !important;
+}
+[data-theme="financial-white"] .bg-\[\#2563eb\] *,
+[data-theme="financial-white"] .bg-\[\#1d4ed8\] *,
+[data-theme="financial-white"] .bg-\[\#00a572\] *,
+[data-theme="financial-white"] .bg-\[\#10b981\] * {
+  color: #ffffff !important;
+}
+
+/* Hover styles in Financial White */
+[data-theme="financial-white"] .hover\:bg-\[\#131b2e\]:hover,
+[data-theme="financial-white"] .hover\:bg-\[\#171f33\]:hover,
+[data-theme="financial-white"] .hover\:bg-\[\#1e293b\]:hover,
+[data-theme="financial-white"] .hover\:bg-\[\#222a3d\]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+[data-theme="financial-white"] .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+/* Brand Initials Logo in Navbar */
+[data-theme="financial-white"] #brand-logo-link > div {
+  background-color: #eff6ff !important;
+  border-color: #bfdbfe !important;
+  color: #1d4ed8 !important;
+}
+
+/* Desktop Nav active button */
+[data-theme="financial-white"] #desktop-nav button.bg-\[\#171f33\] {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+  font-weight: 600 !important;
+}
+
+/* Modals & Backdrop in Financial White */
+[data-theme="financial-white"] .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+/* Form Inputs in Financial White */
+[data-theme="financial-white"] input,
+[data-theme="financial-white"] textarea,
+[data-theme="financial-white"] select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+[data-theme="financial-white"] input::placeholder,
+[data-theme="financial-white"] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* SVG Chart Grid lines in Financial White */
+[data-theme="financial-white"] svg line[stroke="#1e293b"] {
+  stroke: #cbd5e1 !important;
+}
+
+/* Scrollbars in Financial White */
+[data-theme="financial-white"] ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+[data-theme="financial-white"] ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+[data-theme="financial-white"] ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+[data-theme="financial-white"] #recruiter-analytics-popover {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.2) !important;
+}
+
+[data-theme="financial-white"] #recruiter-analytics-popover h4,
+[data-theme="financial-white"] #recruiter-analytics-popover .text-white {
+  color: #0f172a !important;
+}
+
+[data-theme="financial-white"] #recruiter-analytics-popover .bg-\[\#131b2e\],
+[data-theme="financial-white"] #recruiter-analytics-popover .bg-\[\#0b1326\],
+[data-theme="financial-white"] #recruiter-analytics-popover .bg-\[\#0b1326\]\/60,
+[data-theme="financial-white"] #recruiter-analytics-popover .bg-\[\#0b1326\]\/40 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme="financial-white"] #recruiter-analytics-popover .text-\[\#dae2fd\] {
+  color: #334155 !important;
+}
+
+/* ==========================================================================
+   Dedicated Print Stylesheet for ResumeModal Content
+   - Standard A4 page size & margins
+   - Complete background color removal (clean white paper output)
+   - Clean, minimal border-b header line (no solid colored divider)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm;
+  }
+
+  /* Force background removal and clean professional typography */
+  html, body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide entire page structure outside the active resume modal */
+  #app-root-container > header,
+  #app-root-container > main,
+  #app-root-container > footer,
+  #main-nav-header,
+  footer,
+  .resume-modal-no-print,
+  #recruiter-analytics-popover,
+  .fixed.bottom-6 {
+    display: none !important;
+  }
+
+  /* Reset modal backdrop from fixed dark overlay into static print document */
+  #resume-modal-root,
+  .resume-modal-backdrop {
+    position: static !important;
+    display: block !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    inset: auto !important;
+    z-index: auto !important;
+  }
+
+  /* Reset modal dialog container */
+  .resume-modal-dialog {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  /* Printable Resume Content: Remove all dark background colors */
+  .resume-print-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #111827 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    max-height: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Header Line: Clean, minimal border-b instead of a solid colored divider */
+  .resume-header-block {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #d1d5db !important; /* Minimal crisp hairline border-b */
+    padding-bottom: 10pt !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .resume-header-block h1 {
+    color: #111827 !important;
+    font-size: 19pt !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.01em !important;
+    margin-bottom: 3pt !important;
+  }
+
+  .resume-header-block p {
+    color: #1e3a8a !important; /* Corporate navy title */
+    font-size: 9.5pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 5pt !important;
+  }
+
+  .resume-header-block .contact-row {
+    color: #4b5563 !important;
+    font-size: 8pt !important;
+  }
+
+  .resume-header-block .contact-row a {
+    color: #1d4ed8 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Section Titles: Clean minimal border-b underline */
+  .resume-section-title {
+    color: #1e3a8a !important;
+    font-size: 9.5pt !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e5e7eb !important; /* Minimal clean border-b */
+    padding-bottom: 2.5pt !important;
+    margin-bottom: 6pt !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  /* Strip background colors from all child elements in resume */
+  .resume-print-content *,
+  .resume-print-content div,
+  .resume-print-content span,
+  .resume-print-content p,
+  .resume-print-content ul,
+  .resume-print-content li {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .resume-print-content p,
+  .resume-print-content li {
+    color: #1f2937 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.32 !important;
+  }
+
+  /* Skill pillar cards: Subtle hairline outline with zero background */
+  .resume-skill-card {
+    border: 1px solid #e5e7eb !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 6pt 8pt !important;
+    border-radius: 3pt !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .resume-skill-card h3 {
+    color: #111827 !important;
+    font-size: 8.5pt !important;
+    font-weight: 700 !important;
+  }
+
+  .resume-skill-card p {
+    color: #4b5563 !important;
+    font-size: 7.8pt !important;
+  }
+
+  /* Experience items: Clean left accent rule, no dark backgrounds */
+  .resume-exp-item {
+    border-left: 2px solid #cbd5e1 !important;
+    padding-left: 9pt !important;
+    margin-bottom: 10pt !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .resume-exp-item h3 {
+    color: #111827 !important;
+    font-size: 9pt !important;
+    font-weight: 700 !important;
+  }
+
+  .resume-exp-item .exp-company {
+    color: #4b5563 !important;
+    font-weight: 600 !important;
+  }
+
+  .resume-exp-item .exp-period {
+    color: #1e3a8a !important;
+    font-weight: 600 !important;
+    font-size: 8.2pt !important;
+  }
+
+  /* Badges: Neutral light border, no dark fill */
+  .resume-exp-badge {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #374151 !important;
+    font-size: 7.2pt !important;
+    padding: 1pt 3.5pt !important;
+    border-radius: 2pt !important;
+  }
+
+  .resume-exp-bullet {
+    color: #374151 !important;
+    font-size: 8.2pt !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Education cards: Minimal clean outline, no dark fill */
+  .resume-edu-card {
+    border: 1px solid #e5e7eb !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 6pt 8pt !important;
+    border-radius: 3pt !important;
+    margin-bottom: 6pt !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .resume-edu-card h3 {
+    color: #111827 !important;
+    font-size: 8.8pt !important;
+    font-weight: 700 !important;
+  }
+
+  .resume-edu-card .edu-inst {
+    color: #1e3a8a !important;
+    font-weight: 600 !important;
+    font-size: 8.2pt !important;
+  }
+
+  .resume-edu-card p {
+    color: #4b5563 !important;
+    font-size: 7.8pt !important;
+  }
+
+  /* Ensure sections and cards don't break awkwardly across pages */
+  .resume-section,
+  .resume-skill-card,
+  .resume-exp-item,
+  .resume-edu-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
