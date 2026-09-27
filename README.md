@@ -6,11 +6,7 @@ A recruiter-facing personal portfolio site presenting 15+ years of pharmaceutica
 
 ## Preview
 
-screenshot.png
-
-
-That will render your site's screenshot at the top of the repo page.
-
+![Portfolio preview](screenshot.png)
 
 ## Tech Stack
 
