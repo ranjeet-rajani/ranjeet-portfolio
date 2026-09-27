@@ -9,9 +9,9 @@ export const PERSONAL_INFO = {
   email: "ranjeetkumarrajanii@gmail.com",
   phone: "+1 641-233-9348",
   location: "Fairfield, IA, USA",
-  statusBanner: "Authorized to work in the US (CPT) • Seeking employer sponsorship",
+  statusBanner: "",
   domains: "Commercial & Sales Analytics • Pharma Commercial Operations • Business Intelligence",
-  workAuthorization: "Authorized to work in the US (CPT) • Seeking employer sponsorship",
+  workAuthorization: "",
   avatarUrl: "/ranjeet-headshot.jpg",
   socials: {
     linkedin: "https://www.linkedin.com/in/ranjeet-rajani/",
