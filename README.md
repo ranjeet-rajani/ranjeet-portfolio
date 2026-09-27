@@ -8,7 +8,7 @@ A recruiter-facing personal portfolio site presenting 15+ years of pharmaceutica
 
 [ranjeet-rajani.vercel.app].png
 
-That puts a live preview image at the top of your repo page.
+That will render your site's screenshot at the top of the repo page.
 
 
 ## Tech Stack
