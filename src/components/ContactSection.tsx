@@ -170,7 +170,7 @@ export default function ContactSection({
                   <span>Fairfield, Iowa, United States</span>
                 </div>
                 <span>•</span>
-                <span className="text-[#4edea3]">Work Authorization: Authorized to work in the US (CPT) • Seeking employer sponsorship</span>
+                
               </div>
 
               {/* Inline Quick Contact Card (vCard QR) */}
