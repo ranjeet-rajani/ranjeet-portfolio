@@ -881,7 +881,7 @@ export function ProfilePhotoModal({
 
             <div className="space-y-2 text-center sm:text-left flex-1 min-w-0">
               <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#171f33] text-[10px] font-mono text-[#7bd0ff] border border-[#2563eb]/30">
-                <span>{PERSONAL_INFO.statusBanner}</span>
+                <span>COMMERCIAL ANALYTICS & SAP S/4HANA</span>
               </div>
               <h3 className="font-heading text-xl font-bold text-white">
                 {PERSONAL_INFO.name}

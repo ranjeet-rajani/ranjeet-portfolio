@@ -163,14 +163,12 @@ export default function ContactSection({
                 Actively seeking full-time US opportunities in Commercial Analytics, Business Operations, ERP Process Optimization, or Field Force Leadership. Open to on-site, hybrid, and remote engagements.
               </p>
 
-              {/* Location & Authorization Details */}
+              {/* Location Details */}
               <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-[#8d90a0] pt-1">
                 <div className="flex items-center gap-1.5">
                   <MapPin className="w-4 h-4 text-[#7bd0ff]" />
                   <span>Fairfield, Iowa, United States</span>
                 </div>
-                <span>•</span>
-                
               </div>
 
               {/* Inline Quick Contact Card (vCard QR) */}
