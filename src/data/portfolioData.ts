@@ -57,7 +57,7 @@ export const KPI_METRICS: KpiMetric[] = [
     category: "TURNAROUND EXECUTION",
     badge: "+450% YoY",
     value: "450%",
-    title: "Segment P&L Turnaround",
+    title: "Segment Revenue Turnaround",
     description: "Turned around a declining hepatology drug portfolio across 4 primary metropolitan areas via clinician micro-targeting and stock velocity modeling.",
     tags: ["HEPATOLOGY DIVISION", "REVERSED DECLINE"],
     iconType: "percent",
