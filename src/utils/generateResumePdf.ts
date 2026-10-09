@@ -159,7 +159,7 @@ export function createResumePdfDoc(): jsPDF {
   doc.setFontSize(9.35);
   doc.setTextColor(...cDark);
   const summaryText =
-    'Pharmaceutical commercial leader with 15+ years running sales teams, territories, and revenue performance at leading pharma companies in Pakistan. Now pairing that frontline commercial judgment with a modern analytics toolkit — Power BI, SQL, R, Tableau, and AI-assisted workflows — and an MBA in ERP & SAP at Maharishi International University (Fairfield, Iowa) to turn commercial data into decisions that grow revenue. Directed 40+ person field forces, delivered a 450% segment revenue turnaround, and traced a $4.34M revenue shortfall to its root causes using a 45-measure Power BI model.';
+    'Commercial leader with 15+ years running sales teams, territories, and revenue performance at leading companies in Pakistan. Now pairing that frontline commercial judgment with a modern analytics toolkit - Power BI, SQL, R, and AI-assisted workflows - and an MBA in ERP & SAP at Maharishi International University (Fairfield, Iowa) to turn commercial data into decisions that grow revenue. Directed 40+ person field forces, delivered a 450% segment revenue turnaround, and traced a $4.34M revenue shortfall to its root causes using a 45-measure Power BI model.';
   const summaryLines = doc.splitTextToSize(summaryText, contentWidth);
   doc.text(summaryLines, margin, y, { lineHeightFactor: 1.25 });
   y += summaryLines.length * (9.35 * 1.25) + 10;
@@ -174,15 +174,15 @@ export function createResumePdfDoc(): jsPDF {
     },
     {
       bold: 'Data & Business Intelligence:',
-      text: 'Power BI (DAX, Power Query, Star Schema Modeling), SQL, R (Tidyverse), Tableau, Advanced Excel (PivotTables, KPI Dashboards), Data Cleaning & Visualization'
+      text: 'Power BI (DAX, Power Query, Star Schema Modeling), SQL, R (Tidyverse), Advanced Excel (PivotTables, KPI Dashboards), Data Cleaning & Visualization'
     },
     {
       bold: 'AI & Process Acceleration:',
-      text: 'AI-assisted analytics workflows — accelerating dashboard development, data validation, and insight documentation; applying AI to speed commercial reporting, root-cause analysis, and decision-making'
+      text: 'AI-assisted analytics workflows - accelerating dashboard development, data validation, and insight documentation; applying AI to speed commercial reporting, root-cause analysis, and decision-making'
     },
     {
       bold: 'Commercial Operations:',
-      text: 'CRM / SFA (MRep) — Call Reporting, Territory Management, Distribution Tracking; Patient Support Programs; Cross-Functional Collaboration (Medical, Marketing, Supply Chain); Stakeholder Reporting; Hospital Tenders & Formularies'
+      text: 'CRM / SFA (MRep, Azure cloud-hosted) - Call Reporting, Territory Management, Distribution Tracking; Patient Support Programs; Cross-Functional Collaboration (Medical, Marketing, Supply Chain); Stakeholder Reporting; Hospital Tenders & Formularies'
     },
     {
       bold: 'ERP & Leadership (supporting):',
@@ -217,7 +217,7 @@ export function createResumePdfDoc(): jsPDF {
   doc.text('Regional Patients Support Manager', margin, y);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...cDark);
-  doc.text('Jul 2024 – Oct 2024', margin + contentWidth, y, { align: 'right' });
+  doc.text('Jul 2024 - Oct 2024', margin + contentWidth, y, { align: 'right' });
   y += 10.5;
 
   y = drawBullet('Built weekly Excel KPI dashboards tracking revenue-vs-target, stock availability, and territory coverage to guide data-driven resource allocation across the regional portfolio.', y);
@@ -238,7 +238,7 @@ export function createResumePdfDoc(): jsPDF {
   doc.text('Senior Zonal Sales Manager', margin, y);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...cDark);
-  doc.text('Aug 2023 – Jul 2024', margin + contentWidth, y, { align: 'right' });
+  doc.text('Aug 2023 - Jul 2024', margin + contentWidth, y, { align: 'right' });
   y += 10.5;
 
   y = drawBullet('Audited sales-vs-target, forecast, and distribution data through the MRep CRM platform, turning reports into Power BI and Excel presentations that guided resource allocation and beat quarterly revenue targets.', y);
@@ -258,10 +258,10 @@ export function createResumePdfDoc(): jsPDF {
   doc.text('Zonal Sales Manager', margin, y);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...cDark);
-  doc.text('Feb 2022 – Aug 2023', margin + contentWidth, y, { align: 'right' });
+  doc.text('Feb 2022 - Aug 2023', margin + contentWidth, y, { align: 'right' });
   y += 10.5;
 
-  y = drawBullet('Directed a 40-person field sales force, reallocating effort across territories using MRep performance data — exceeded annual quota at 116% in both 2022 and 2023.', y);
+  y = drawBullet('Directed a 40-person field sales force, reallocating effort across territories using MRep performance data - exceeded annual quota at 116% in both 2022 and 2023.', y);
   y = drawBullet('Built a territory performance tracker across 30+ healthcare institutions, expanding regional coverage by 25%.', y);
   y = drawBullet('Led the national launch of Prulevity (Prucalopride), prioritizing high-potential accounts through account and territory analysis to capture 40% market share within 12 months.', y);
   y = drawBullet('Implemented a client satisfaction scoring system, lifting customer retention scores by 20%.', y);
@@ -286,10 +286,10 @@ export function createResumePdfDoc(): jsPDF {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9.35);
   doc.setTextColor(...cBlack);
-  doc.text('Sales Manager — Speciality Therapeutics', margin, y);
+  doc.text('Sales Manager - Speciality Therapeutics', margin, y);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...cDark);
-  doc.text('Feb 2018 – Feb 2021', margin + contentWidth, y, { align: 'right' });
+  doc.text('Feb 2018 - Feb 2021', margin + contentWidth, y, { align: 'right' });
   y += 10.5;
 
   y = drawBullet('Delivered a 450% revenue turnaround in the Hepatology segment in Year 1 by diagnosing an underperforming territory through dashboard reporting, then expanding HCP coverage and call quality; led a 12-person team across Sindh and Baluchistan.', y);
@@ -314,36 +314,36 @@ export function createResumePdfDoc(): jsPDF {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9.35);
   doc.setTextColor(...cBlack);
-  doc.text('Area Sales Manager — Key Institutional Accounts', margin, y);
+  doc.text('Area Sales Manager - Key Institutional Accounts', margin, y);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...cDark);
-  doc.text('Jan 2013 – Feb 2018', margin + contentWidth, y, { align: 'right' });
+  doc.text('Jan 2013 - Feb 2018', margin + contentWidth, y, { align: 'right' });
   y += 10.5;
 
   y = drawBullet('Led 5 Territory Managers across premier institutions (Aga Khan University Hospital, NICVD, JPMC), growing market share by 20% through account and tender data analysis.', y);
   y = drawBullet('Secured multi-year government hospital tenders through quarterly territory data analysis; lifted team productivity 30% with weekly KPI reviews and structured coaching.', y);
   y += 8.5;
 
-  // ---------- KEY ANALYTICS & ERP PROJECTS ----------
-  y = drawSectionTitle('KEY ANALYTICS & ERP PROJECTS', y);
+  // ---------- KEY ANALYTICS PROJECTS ----------
+  y = drawSectionTitle('KEY ANALYTICS PROJECTS', y);
 
   // Project 1: Pharma Command Center
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9.35);
   doc.setTextColor(...cBlack);
-  doc.text('Pharma Commercial Analytics Command Center — Power BI, DAX, SQL, Star Schema (2026)', margin, y);
+  doc.text('Pharma Commercial Analytics Command Center - Power BI, DAX, SQL, Star Schema (2026)', margin, y);
   y += 10;
 
   y = drawBullet('Built a 7-page Power BI report on a 9-table star schema (4 fact tables, 5 dimensions) spanning 24 months, 20 territories, 128 healthcare accounts, and 6 brands, with 45 DAX measures reconciled line-by-line to source data.', y);
-  y = drawBullet('Traced 30% of a $4.34M revenue shortfall ($1.31M) to inventory stockouts rather than sales execution, classifying all 20 territories by root cause — supply, competitive, or execution — each mapped to an accountable function; built a month-index key enabling month-over-month and rolling analysis.', y);
-  y = drawBullet('Accelerated delivery with AI-assisted workflows across DAX development, data validation, and documentation — from raw data to business decisions, faster.', y);
+  y = drawBullet('Traced 30% of a $4.34M revenue shortfall ($1.31M) to inventory stockouts rather than sales execution, classifying all 20 territories by root cause - supply, competitive, or execution - each mapped to an accountable function; built a month-index key enabling month-over-month and rolling analysis.', y);
+  y = drawBullet('Accelerated delivery with AI-assisted workflows across DAX development, data validation, and documentation - from raw data to business decisions, faster.', y);
   y += 5.5;
 
   // Project 2: Cyclistic Bikeshare
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9.35);
   doc.setTextColor(...cBlack);
-  doc.text('Cyclistic Bikeshare Capstone, Google Data Analytics — R, Tidyverse (2026)', margin, y);
+  doc.text('Cyclistic Bikeshare Capstone, Google Data Analytics - R, Tidyverse (2026)', margin, y);
   y += 10;
 
   y = drawBullet('Cleaned and analyzed 4.3M+ trip records in R, applying documented rules to remove zero-duration and over-24-hour rides; found casual riders average 22.8-minute rides vs. 12.1 for members, with 8x seasonal variation against under 3x for members.', y);
@@ -354,11 +354,10 @@ export function createResumePdfDoc(): jsPDF {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9.35);
   doc.setTextColor(...cBlack);
-  doc.text('SAP S/4HANA Procure-to-Pay Implementation — SAP MM, FI/CO, IDES Sandbox (2026)', margin, y);
+  doc.text('SAP S/4HANA Procure-to-Pay Implementation - SAP MM, FI/CO, IDES Sandbox (2026)', margin, y);
   y += 10;
 
-  y = drawBullet('Configured end-to-end P2P in the IDES sandbox, mapping the full cycle from purchase requisition through vendor payment and GL posting.', y);
-  y = drawBullet('Redesigned approvals to eliminate a 3-step bottleneck, cutting simulated procurement cycle time by 18%; produced process documentation and a stakeholder presentation covering gap analysis and recommended configuration changes.', y);
+  y = drawBullet('Configured end-to-end procure-to-pay in the IDES sandbox (purchase requisition through vendor payment and GL posting); redesigned approvals to cut simulated procurement cycle time by 18%.', y);
   y += 8.5;
 
   // ---------- EDUCATION ----------
@@ -372,7 +371,7 @@ export function createResumePdfDoc(): jsPDF {
   const wEdu1Bold = doc.getTextWidth(edu1Bold);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...cDark);
-  doc.text(' — Maharishi International University, Fairfield, IA (Feb 2026 – Oct 2028)', margin + wEdu1Bold, y);
+  doc.text(' - Maharishi International University, Fairfield, IA (Feb 2026 - Oct 2028)', margin + wEdu1Bold, y);
   y += 12.5;
 
   doc.setFont('helvetica', 'bold');
@@ -383,13 +382,13 @@ export function createResumePdfDoc(): jsPDF {
   const wEdu2Bold = doc.getTextWidth(edu2Bold);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...cDark);
-  doc.text(' — Shah Abdul Latif University, Pakistan', margin + wEdu2Bold, y);
+  doc.text(' - Shah Abdul Latif University, Pakistan', margin + wEdu2Bold, y);
   y += 10;
 
   // ---------- CERTIFICATIONS ----------
   y = drawSectionTitle('CERTIFICATIONS', y);
 
-  y = drawBullet('Google Data Analytics Professional Certificate — SQL, R, Tableau, Data Cleaning & Visualization (2026)', y, 12, 9.3, 1.22, 3.5);
+  y = drawBullet('Google Data Analytics Professional Certificate - SQL, R, Tableau, Data Cleaning & Visualization (2026)', y, 12, 9.3, 1.22, 3.5);
   y = drawBullet('Sales Management Development Program (Part I & II), TSF (2024)', y, 12, 9.3, 1.22, 3.5);
   y = drawBullet('Advanced Pharmaceutical Selling Skills, Ferozsons (2023)', y, 12, 9.3, 1.22, 3.5);
   y = drawBullet('Leadership Development Program, Getz Pharma (2013)', y, 12, 9.3, 1.22, 3.5);

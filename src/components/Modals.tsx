@@ -140,7 +140,7 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
               PROFESSIONAL SUMMARY
             </h2>
             <p className="text-xs sm:text-[13px] text-[#c3c6d7] leading-relaxed">
-              Pharmaceutical commercial leader with 15+ years running sales teams, territories, and revenue performance at leading pharma companies in Pakistan. Now pairing that frontline commercial judgment with a modern analytics toolkit — Power BI, SQL, R, Tableau, and AI-assisted workflows — and an MBA in ERP & SAP at Maharishi International University (Fairfield, Iowa) to turn commercial data into decisions that grow revenue. Directed 40+ person field forces, delivered a 450% segment revenue turnaround, and traced a $4.34M revenue shortfall to its root causes using a 45-measure Power BI model.
+              Commercial leader with 15+ years running sales teams, territories, and revenue performance at leading companies in Pakistan. Now pairing that frontline commercial judgment with a modern analytics toolkit - Power BI, SQL, R, and AI-assisted workflows - and an MBA in ERP & SAP at Maharishi International University (Fairfield, Iowa) to turn commercial data into decisions that grow revenue. Directed 40+ person field forces, delivered a 450% segment revenue turnaround, and traced a $4.34M revenue shortfall to its root causes using a 45-measure Power BI model.
             </p>
           </div>
 
@@ -156,15 +156,15 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
               </div>
               <div>
                 <span className="font-bold text-white">Data & Business Intelligence: </span>
-                <span>Power BI (DAX, Power Query, Star Schema Modeling), SQL, R (Tidyverse), Tableau, Advanced Excel (PivotTables, KPI Dashboards), Data Cleaning & Visualization</span>
+                <span>Power BI (DAX, Power Query, Star Schema Modeling), SQL, R (Tidyverse), Advanced Excel (PivotTables, KPI Dashboards), Data Cleaning & Visualization</span>
               </div>
               <div>
                 <span className="font-bold text-white">AI & Process Acceleration: </span>
-                <span>AI-assisted analytics workflows — accelerating dashboard development, data validation, and insight documentation; applying AI to speed commercial reporting, root-cause analysis, and decision-making</span>
+                <span>AI-assisted analytics workflows - accelerating dashboard development, data validation, and insight documentation; applying AI to speed commercial reporting, root-cause analysis, and decision-making</span>
               </div>
               <div>
                 <span className="font-bold text-white">Commercial Operations: </span>
-                <span>CRM / SFA (MRep) — Call Reporting, Territory Management, Distribution Tracking; Patient Support Programs; Cross-Functional Collaboration (Medical, Marketing, Supply Chain); Stakeholder Reporting; Hospital Tenders & Formularies</span>
+                <span>CRM / SFA (MRep, Azure cloud-hosted) - Call Reporting, Territory Management, Distribution Tracking; Patient Support Programs; Cross-Functional Collaboration (Medical, Marketing, Supply Chain); Stakeholder Reporting; Hospital Tenders & Formularies</span>
               </div>
               <div>
                 <span className="font-bold text-white">ERP & Leadership (supporting): </span>
@@ -191,7 +191,7 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
                 </p>
                 <div className="flex justify-between items-baseline flex-wrap text-xs">
                   <span className="font-semibold text-white">Regional Patients Support Manager</span>
-                  <span className="text-[#7bd0ff] font-mono text-[11px]">Jul 2024 – Oct 2024</span>
+                  <span className="text-[#7bd0ff] font-mono text-[11px]">Jul 2024 - Oct 2024</span>
                 </div>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
                   <li>Built weekly Excel KPI dashboards tracking revenue-vs-target, stock availability, and territory coverage to guide data-driven resource allocation across the regional portfolio.</li>
@@ -209,7 +209,7 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
                 </div>
                 <div className="flex justify-between items-baseline flex-wrap text-xs">
                   <span className="font-semibold text-white">Senior Zonal Sales Manager</span>
-                  <span className="text-[#7bd0ff] font-mono text-[11px]">Aug 2023 – Jul 2024</span>
+                  <span className="text-[#7bd0ff] font-mono text-[11px]">Aug 2023 - Jul 2024</span>
                 </div>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
                   <li>Audited sales-vs-target, forecast, and distribution data through the MRep CRM platform, turning reports into Power BI and Excel presentations that guided resource allocation and beat quarterly revenue targets.</li>
@@ -226,10 +226,10 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
                 </div>
                 <div className="flex justify-between items-baseline flex-wrap text-xs">
                   <span className="font-semibold text-white">Zonal Sales Manager</span>
-                  <span className="text-[#7bd0ff] font-mono text-[11px]">Feb 2022 – Aug 2023</span>
+                  <span className="text-[#7bd0ff] font-mono text-[11px]">Feb 2022 - Aug 2023</span>
                 </div>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
-                  <li>Directed a 40-person field sales force, reallocating effort across territories using MRep performance data — exceeded annual quota at 116% in both 2022 and 2023.</li>
+                  <li>Directed a 40-person field sales force, reallocating effort across territories using MRep performance data - exceeded annual quota at 116% in both 2022 and 2023.</li>
                   <li>Built a territory performance tracker across 30+ healthcare institutions, expanding regional coverage by 25%.</li>
                   <li>Led the national launch of Prulevity (Prucalopride), prioritizing high-potential accounts through account and territory analysis to capture 40% market share within 12 months.</li>
                   <li>Implemented a client satisfaction scoring system, lifting customer retention scores by 20%.</li>
@@ -247,8 +247,8 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
                   Pakistani pharmaceutical company known for its hepatology and gastroenterology product portfolio
                 </p>
                 <div className="flex justify-between items-baseline flex-wrap text-xs">
-                  <span className="font-semibold text-white">Sales Manager — Speciality Therapeutics</span>
-                  <span className="text-[#7bd0ff] font-mono text-[11px]">Feb 2018 – Feb 2021</span>
+                  <span className="font-semibold text-white">Sales Manager - Speciality Therapeutics</span>
+                  <span className="text-[#7bd0ff] font-mono text-[11px]">Feb 2018 - Feb 2021</span>
                 </div>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
                   <li>Delivered a 450% revenue turnaround in the Hepatology segment in Year 1 by diagnosing an underperforming territory through dashboard reporting, then expanding HCP coverage and call quality; led a 12-person team across Sindh and Baluchistan.</li>
@@ -269,8 +269,8 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
                   Pakistan's leading pharmaceutical company, with a strong specialty care and cardiology portfolio
                 </p>
                 <div className="flex justify-between items-baseline flex-wrap text-xs">
-                  <span className="font-semibold text-white">Area Sales Manager — Key Institutional Accounts</span>
-                  <span className="text-[#7bd0ff] font-mono text-[11px]">Jan 2013 – Feb 2018</span>
+                  <span className="font-semibold text-white">Area Sales Manager - Key Institutional Accounts</span>
+                  <span className="text-[#7bd0ff] font-mono text-[11px]">Jan 2013 - Feb 2018</span>
                 </div>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
                   <li>Led 5 Territory Managers across premier institutions (Aga Khan University Hospital, NICVD, JPMC), growing market share by 20% through account and tender data analysis.</li>
@@ -280,26 +280,26 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
             </div>
           </div>
 
-          {/* Key Analytics & ERP Projects */}
+          {/* Key Analytics Projects */}
           <div className="resume-section">
             <h2 className="text-xs font-mono font-bold tracking-widest text-[#7bd0ff] uppercase pb-1 border-b border-[#334155]/60 mb-3 resume-section-title">
-              KEY ANALYTICS & ERP PROJECTS
+              KEY ANALYTICS PROJECTS
             </h2>
             <div className="space-y-4">
               <div className="space-y-1">
                 <h3 className="text-xs sm:text-sm font-bold text-white">
-                  Pharma Commercial Analytics Command Center — Power BI, DAX, SQL, Star Schema (2026)
+                  Pharma Commercial Analytics Command Center - Power BI, DAX, SQL, Star Schema (2026)
                 </h3>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
                   <li>Built a 7-page Power BI report on a 9-table star schema (4 fact tables, 5 dimensions) spanning 24 months, 20 territories, 128 healthcare accounts, and 6 brands, with 45 DAX measures reconciled line-by-line to source data.</li>
-                  <li>Traced 30% of a $4.34M revenue shortfall ($1.31M) to inventory stockouts rather than sales execution, classifying all 20 territories by root cause — supply, competitive, or execution — each mapped to an accountable function; built a month-index key enabling month-over-month and rolling analysis.</li>
-                  <li>Accelerated delivery with AI-assisted workflows across DAX development, data validation, and documentation — from raw data to business decisions, faster.</li>
+                  <li>Traced 30% of a $4.34M revenue shortfall ($1.31M) to inventory stockouts rather than sales execution, classifying all 20 territories by root cause - supply, competitive, or execution - each mapped to an accountable function; built a month-index key enabling month-over-month and rolling analysis.</li>
+                  <li>Accelerated delivery with AI-assisted workflows across DAX development, data validation, and documentation - from raw data to business decisions, faster.</li>
                 </ul>
               </div>
 
               <div className="space-y-1">
                 <h3 className="text-xs sm:text-sm font-bold text-white">
-                  Cyclistic Bikeshare Capstone, Google Data Analytics — R, Tidyverse (2026)
+                  Cyclistic Bikeshare Capstone, Google Data Analytics - R, Tidyverse (2026)
                 </h3>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
                   <li>Cleaned and analyzed 4.3M+ trip records in R, applying documented rules to remove zero-duration and over-24-hour rides; found casual riders average 22.8-minute rides vs. 12.1 for members, with 8x seasonal variation against under 3x for members.</li>
@@ -309,11 +309,10 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
 
               <div className="space-y-1">
                 <h3 className="text-xs sm:text-sm font-bold text-white">
-                  SAP S/4HANA Procure-to-Pay Implementation — SAP MM, FI/CO, IDES Sandbox (2026)
+                  SAP S/4HANA Procure-to-Pay Implementation - SAP MM, FI/CO, IDES Sandbox (2026)
                 </h3>
                 <ul className="space-y-1 text-xs text-[#c3c6d7] list-disc list-inside">
-                  <li>Configured end-to-end P2P in the IDES sandbox, mapping the full cycle from purchase requisition through vendor payment and GL posting.</li>
-                  <li>Redesigned approvals to eliminate a 3-step bottleneck, cutting simulated procurement cycle time by 18%; produced process documentation and a stakeholder presentation covering gap analysis and recommended configuration changes.</li>
+                  <li>Configured end-to-end procure-to-pay in the IDES sandbox (purchase requisition through vendor payment and GL posting); redesigned approvals to cut simulated procurement cycle time by 18%.</li>
                 </ul>
               </div>
             </div>
@@ -327,11 +326,11 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
             <div className="space-y-1.5 text-xs">
               <div>
                 <span className="font-bold text-white">MBA, Enterprise Resource Planning (ERP) & SAP</span>
-                <span className="text-[#c3c6d7]"> — Maharishi International University, Fairfield, IA (Feb 2026 – Oct 2028)</span>
+                <span className="text-[#c3c6d7]"> - Maharishi International University, Fairfield, IA (Feb 2026 - Oct 2028)</span>
               </div>
               <div>
                 <span className="font-bold text-white">MA Economics (2009); BSc (2003)</span>
-                <span className="text-[#c3c6d7]"> — Shah Abdul Latif University, Pakistan</span>
+                <span className="text-[#c3c6d7]"> - Shah Abdul Latif University, Pakistan</span>
               </div>
             </div>
           </div>
@@ -351,7 +350,7 @@ ${EDUCATION.map((ed) => `${ed.degree} - ${ed.institution}\n${ed.description}`).j
                 >
                   Google Data Analytics Professional Certificate
                 </a>{' '}
-                — SQL, R, Tableau, Data Cleaning & Visualization (2026)
+                - SQL, R, Tableau, Data Cleaning & Visualization (2026)
               </li>
               <li>Sales Management Development Program (Part I & II), TSF (2024)</li>
               <li>Advanced Pharmaceutical Selling Skills, Ferozsons (2023)</li>

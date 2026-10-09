@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   initials: "RKR",
   title: "Commercial & Sales Analytics • Pharma Commercial Operations • Business Intelligence",
   tagline: "COMMERCIAL & ANALYTICS",
-  bio: "Pharmaceutical commercial leader with 15+ years driving high-velocity sales growth, regional field force operations, and territory strategy and field force effectiveness across Pakistan's leading pharmaceutical companies. Translates deep commercial domain expertise into analytics using Power BI, SQL, R, and SAP S/4HANA to uncover bottom-line revenue opportunities — including uncovering an unfulfilled $1.31M regional stockout gap through Star Schema BI modeling and spearheading a +450% therapeutic portfolio turnaround. Currently an MBA candidate in Enterprise Resource Planning (ERP) & SAP at Maharishi International University in Fairfield, Iowa.",
+  bio: "Commercial leader with 15+ years driving high-velocity sales growth, regional field force operations, and territory strategy and field force effectiveness across Pakistan's leading companies. Translates deep commercial domain expertise into analytics using Power BI, SQL, R, and SAP S/4HANA to uncover bottom-line revenue opportunities - including uncovering an unfulfilled $1.31M regional stockout gap through Star Schema BI modeling and spearheading a +450% therapeutic portfolio turnaround. Currently an MBA candidate in Enterprise Resource Planning (ERP) & SAP at Maharishi International University in Fairfield, Iowa.",
   email: "ranjeetkumarrajanii@gmail.com",
   phone: "+1 641-233-9348",
   location: "Fairfield, IA, USA",
@@ -269,7 +269,7 @@ clean_rides <- raw_data %>%
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "ferozsons-regional",
-    period: "Jul 2024 – Oct 2024",
+    period: "Jul 2024 - Oct 2024",
     duration: "4 MOS",
     company: "Ferozsons Laboratories Ltd. | Karachi, Pakistan",
     role: "Regional Patients Support Manager",
@@ -282,7 +282,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "ferozsons-sr-zonal",
-    period: "Aug 2023 – Jul 2024",
+    period: "Aug 2023 - Jul 2024",
     duration: "1 YEAR",
     company: "Ferozsons Laboratories Ltd. | Karachi, Pakistan",
     role: "Senior Zonal Sales Manager",
@@ -294,13 +294,13 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "ferozsons-zonal",
-    period: "Feb 2022 – Aug 2023",
+    period: "Feb 2022 - Aug 2023",
     duration: "1.5 YEARS",
     company: "Ferozsons Laboratories Ltd. | Karachi, Pakistan",
     role: "Zonal Sales Manager",
     badges: ["116% Quota Achieved", "40-Person Field Force", "Prulevity Launch"],
     bullets: [
-      "Directed a 40-person field sales force, reallocating effort across territories using MRep performance data — exceeded annual quota at 116% in both 2022 and 2023.",
+      "Directed a 40-person field sales force, reallocating effort across territories using MRep performance data - exceeded annual quota at 116% in both 2022 and 2023.",
       "Built a territory performance tracker across 30+ healthcare institutions, expanding regional coverage by 25%.",
       "Led the national launch of Prulevity (Prucalopride), prioritizing high-potential accounts through account and territory analysis to capture 40% market share within 12 months.",
       "Implemented a client satisfaction scoring system, lifting customer retention scores by 20%."
@@ -308,10 +308,10 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "ccl",
-    period: "Feb 2018 – Feb 2021",
+    period: "Feb 2018 - Feb 2021",
     duration: "3 YEARS",
     company: "CCL Pharmaceuticals | Karachi, Pakistan",
-    role: "Sales Manager — Speciality Therapeutics",
+    role: "Sales Manager - Speciality Therapeutics",
     badges: ["+450% Turnaround", "SKU Dashboards", "12-Person Team"],
     bullets: [
       "Delivered a 450% revenue turnaround in the Hepatology segment in Year 1 by diagnosing an underperforming territory through dashboard reporting, then expanding HCP coverage and call quality; led a 12-person team across Sindh and Baluchistan.",
@@ -322,10 +322,10 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "getz",
-    period: "Jan 2013 – Feb 2018",
+    period: "Jan 2013 - Feb 2018",
     duration: "5 YEARS",
     company: "Getz Pharma | Karachi, Pakistan",
-    role: "Area Sales Manager — Key Institutional Accounts",
+    role: "Area Sales Manager - Key Institutional Accounts",
     badges: ["Premier Hospitals", "Govt Tenders", "+30% Productivity"],
     bullets: [
       "Led 5 Territory Managers across premier institutions (Aga Khan University Hospital, NICVD, JPMC), growing market share by 20% through account and tender data analysis.",
