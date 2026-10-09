@@ -27,28 +27,26 @@ export default function ContactSection({
   const [showQrModal, setShowQrModal] = useState<boolean>(false);
 
   // Standard RFC 2426 vCard 3.0 format for iOS & Android
+  // Streamlined to essential fields to minimize QR matrix density (53 modules vs 65+) for reliable screen scanning
   const vCardContent = [
     'BEGIN:VCARD',
     'VERSION:3.0',
-    'N:Rajani;Ranjeet;Kumar;;',
+    'N:Rajani;Ranjeet;;;',
     'FN:Ranjeet Kumar Rajani',
-    'ORG:Commercial & Sales Analytics',
-    'TITLE:Commercial & Sales Analytics • Pharma Commercial Operations • Business Intelligence',
-    `TEL;TYPE=CELL,VOICE:${PERSONAL_INFO.phone}`,
-    `EMAIL;TYPE=PREF,INTERNET:${PERSONAL_INFO.email}`,
-    'ADR;TYPE=WORK,POSTAL:;;Fairfield;IA;52556;USA',
+    'TITLE:Commercial Analytics',
+    `TEL:${PERSONAL_INFO.phone}`,
+    `EMAIL:${PERSONAL_INFO.email}`,
     `URL:${PERSONAL_INFO.socials.linkedin}`,
-    'NOTE:Pharmaceutical commercial leader with 15+ years experience. Power BI, SQL, R, SAP S/4HANA.',
     'END:VCARD',
   ].join('\r\n');
 
   useEffect(() => {
     QRCode.toDataURL(vCardContent, {
-      errorCorrectionLevel: 'M',
-      margin: 2,
-      width: 320,
+      errorCorrectionLevel: 'L',
+      margin: 1,
+      width: 512,
       color: {
-        dark: '#090d16',
+        dark: '#000000',
         light: '#ffffff',
       },
     })
@@ -172,29 +170,30 @@ export default function ContactSection({
               </div>
 
               {/* Inline Quick Contact Card (vCard QR) */}
-              <div className="mt-6 pt-5 border-t border-[#1e293b] flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#091122]/80 p-4 rounded-xl border border-[#2563eb]/20 shadow-inner">
-                <div className="flex items-center gap-4 w-full sm:w-auto">
+              <div className="mt-6 pt-5 border-t border-[#1e293b] flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#091122]/85 p-4 rounded-xl border border-[#2563eb]/25 shadow-inner">
+                <div className="flex items-center gap-3.5 w-full sm:w-auto">
                   {qrDataUrl ? (
                     <button
                       onClick={() => {
                         recordCtaClick('contact', 'Clicked Contact QR Thumbnail');
                         setShowQrModal(true);
                       }}
-                      className="group/qr relative shrink-0 p-1 bg-white rounded-lg shadow-md hover:ring-2 hover:ring-[#2563eb] transition-all cursor-pointer"
-                      title="Click to view full-size QR code"
+                      className="group/qr relative shrink-0 p-2 bg-white rounded-xl shadow-lg ring-1 ring-white/30 hover:ring-2 hover:ring-[#2563eb] hover:scale-105 transition-all duration-200 cursor-pointer"
+                      title="Point phone camera here to scan, or click to enlarge"
                     >
                       <img
                         src={qrDataUrl}
                         alt="Ranjeet Kumar Rajani Contact QR Code"
-                        className="w-16 h-16 sm:w-18 sm:h-18 object-contain rounded"
+                        className="w-28 h-28 sm:w-30 sm:h-30 md:w-32 md:h-32 object-contain rounded"
+                        style={{ imageRendering: 'pixelated' }}
                       />
-                      <div className="absolute inset-0 bg-black/40 rounded opacity-0 group-hover/qr:opacity-100 flex items-center justify-center transition-opacity">
-                        <QrCode className="w-5 h-5 text-white" />
+                      <div className="absolute inset-0 bg-black/40 rounded-xl opacity-0 group-hover/qr:opacity-100 flex items-center justify-center transition-opacity">
+                        <QrCode className="w-6 h-6 text-white" />
                       </div>
                     </button>
                   ) : (
-                    <div className="w-16 h-16 rounded-lg bg-[#171f33] flex items-center justify-center text-[#7bd0ff] shrink-0 border border-[#2563eb]/30">
-                      <QrCode className="w-8 h-8 animate-pulse" />
+                    <div className="w-28 h-28 sm:w-30 sm:h-30 md:w-32 md:h-32 rounded-xl bg-[#171f33] flex items-center justify-center text-[#7bd0ff] shrink-0 border border-[#2563eb]/30">
+                      <QrCode className="w-9 h-9 animate-pulse" />
                     </div>
                   )}
                   <div className="min-w-0">
@@ -203,11 +202,11 @@ export default function ContactSection({
                         Quick Contact Saving (vCard QR)
                       </span>
                       <span className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-[#00a572]/20 text-[#4edea3] border border-[#00a572]/40 font-semibold uppercase">
-                        Mobile Camera Ready
+                        Scan Ready
                       </span>
                     </div>
-                    <p className="text-[11px] text-[#8d90a0] mt-0.5 leading-relaxed">
-                      Scan code with your phone camera to add Ranjeet directly to your contacts (iOS & Android).
+                    <p className="text-[11px] text-[#8d90a0] mt-1 leading-relaxed max-w-xs">
+                      Point phone camera at this QR code to add Ranjeet directly to contacts, or click to enlarge.
                     </p>
                   </div>
                 </div>
@@ -218,14 +217,14 @@ export default function ContactSection({
                       recordCtaClick('contact', 'Clicked Enlarge QR Button');
                       setShowQrModal(true);
                     }}
-                    className="flex-1 sm:flex-none px-3.5 py-2 text-xs font-mono font-medium text-[#7bd0ff] hover:text-white bg-[#171f33] hover:bg-[#1f2a44] border border-[#2563eb]/40 rounded-lg flex items-center justify-center gap-1.5 transition-colors"
+                    className="flex-1 sm:flex-none px-3.5 py-2 text-xs font-mono font-medium text-[#7bd0ff] hover:text-white bg-[#171f33] hover:bg-[#1f2a44] border border-[#2563eb]/40 rounded-lg flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                   >
                     <QrCode className="w-3.5 h-3.5" />
                     <span>View QR</span>
                   </button>
                   <button
                     onClick={handleDownloadVCard}
-                    className="flex-1 sm:flex-none px-3.5 py-2 text-xs font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm"
+                    className="flex-1 sm:flex-none px-3.5 py-2 text-xs font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm cursor-pointer"
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span>Save .vcf</span>
